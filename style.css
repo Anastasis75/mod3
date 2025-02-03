@@ -1,0 +1,480 @@
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    background-color: hsl(25, 22%, 77%);
+    padding: 20px 0;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.nav {
+    display: flex;
+    margin-top: 0px;
+    list-style: none; /* Remove default list styles */
+}
+
+.nav-link {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.icons {
+    display: block;
+    align-items: center;
+    top: 0;
+}
+
+.icon {
+  margin-left: 20px;
+  color: #333;
+  font-size: 1.3rem;
+}
+.burger-menu-btn {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+   .container2 {
+        flex-wrap: wrap;
+     }
+    .nav, .icons{
+        display: none; /* hide by default */
+        flex-direction: column; /* Make it a column */
+        position: absolute;
+        top: 100%; /* place it below header */
+        left: 0;
+        width: 100%;
+        background-color: #f2f2f2; /* Match the header bg */
+        padding: 10px 0;
+        text-align: center;
+        border-top: 1px solid black;
+    }
+
+     .nav-link, .icon{
+        margin: 10px 0; /* Adjust spacing for vertical stack */
+        display: block; /* Make each link a block element */
+    }
+
+    .nav.active, .icons.active{
+        display: flex;
+    }
+     .burger-menu-btn {
+       display: block;
+     }
+}
+@media (max-width: 320px) {
+    .container2 {
+         padding: 0 10px; /* Adjust padding */
+     }
+}
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.site-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 60;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+    background-color: hsl(25, 22%, 77%);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+
+/* header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(25, 22%, 77%);
+    color: white;
+    padding: 15px 20px;
+} */
+.logo {
+    height: 22px;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation {
+    display: flex;
+    gap: 20px;
+}
+.navigation a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: text-decoration 0.3s;
+}
+.navigation a:hover {
+    text-decoration: underline;
+    text-decoration-color: black; 
+}
+
+.header-images .img {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+}
+.catalog-title {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    margin-left: 25px;
+}
+
+.catalog {
+    margin-top: 65px;
+    margin-bottom: 25px;
+}
+
+.catalog-title {
+    font-size: 15px;
+    font-weight: lighter; 
+    position: relative;
+    display: inline-block; 
+    padding-left: 120px;
+    color: #9A6437;
+}
+.catalog-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    background-color: rgb(175, 148, 115);
+    transform: translateY(-50%);
+    margin-left: 60px;
+}
+.section-title {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 60px;
+    font-weight: lighter; 
+}
+
+.product-list {
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: transparent;  
+    width: 200px;
+}
+.product-card .img2 {
+    width: 150%;
+    height: auto;
+}
+.product-info {
+    padding: 10px;
+}
+.product-info h4 {
+    margin: 1px 0;
+    color: #3b3b3b;
+    font-size: 20px; 
+}
+.products {
+    text-align: left;
+}
+.price {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+.price1 {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+}
+.rating {
+    color: gold;
+    text-align: right;
+    width: 110px;
+    margin-left: 165px;
+    margin-top: 10px;
+}
+.product-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.product-actions button {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product-actions button:hover {
+    background-color: #555;
+}
+
+.site-footer {
+    background-color: #D9D9D9;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.site-footer h3 {
+    color: #1B1A1A;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.site-footer p {
+    margin-bottom: 20px;
+}
+.site-footer form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.site-footer input {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.site-footer button {
+    width: 150px;
+    padding: 10px 20px;
+    font-size: 13px;
+    background-color: #D9D9D9;
+    color: #525252;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.site-footer button:hover {
+    background-color: #5a5a5a;
+    color: #ffffff;
+    border: 1px solid #ccc;
+}
+.email {
+    background-color: #D9D9D9;
+    color: #D9D9D9;
+    border: 1px solid #525252;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.p1 {
+    color: #5E5E5E;
+}
+h1 {
+    font-size: 40px;
+}
+
+.container {
+    columns: 4;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+} 
+.cham {
+    margin-top: -15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+.button {
+    background-color: #f5f5dc;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+.scale {
+    transition: 0.4s;
+}
+.scale:hover {
+    transform: scale(1.1);
+}
+
+/* Для экранов меньше 768px */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        height: auto;
+        gap: 10px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .header-images .img {
+        margin-left: 10px;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+    .navigation a {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .header-images {
+        display: flex;
+        margin-top: 5px;
+    }
+    .catalog-title {
+        font-size: 18px;
+        padding-left: 10px;
+    }
+
+    .catalog-title::before {
+        width: 30px;
+        margin-left: 20px;
+    }
+     .section-title {
+       font-size: 24px;
+       margin-left: 15px;
+    }
+     .cham {
+       padding: 10px;
+       flex-direction: column;
+       align-items: flex-start;
+    }
+    .cham nav {
+    margin-top: 10px;
+    }
+    .container {
+        columns: 2;
+        padding: 0 10px;
+    }
+
+   .product-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .product-card .img2 {
+        width: 100%;
+    }
+    .product-info h4 {
+      font-size: 18px;
+    }
+    .rating {
+       margin-left: 150px;
+    }
+
+    .site-footer h3 {
+        font-size: 24px;
+    }
+
+    .site-footer form {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+     .site-footer input {
+        width: 200px;
+    }
+     .site-footer button {
+        width: 180px;
+         font-size: 13px;
+    }
+}
+
+/* 320px */
+@media (max-width: 320px) {
+   .site-header {
+        padding: 5px;
+        gap: 5px;
+    }
+    .navigation a {
+        font-size: 12px;
+        padding: 3px;
+    }
+        .header-images .img {
+        margin-left: 5px;
+    }
+    .catalog-title {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+    .catalog-title::before {
+        width: 20px;
+        margin-left: 15px;
+    }
+        .section-title {
+       font-size: 20px;
+       margin-left: 10px;
+        }
+     .product-info h4 {
+      font-size: 16px;
+    }
+      .rating {
+        margin-left: 115px;
+        width: 80px;
+        margin-top: 5px;
+    }
+     .site-footer h3 {
+        font-size: 20px;
+    }
+       .site-footer input {
+        width: 180px;
+    }
+    .site-footer button {
+        width: 150px;
+        background-color: #D9D9D9;
+        color: #525252;
+    }
+    .site-footer button:hover {
+        width: 150px;
+    }
+}
